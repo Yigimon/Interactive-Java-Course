@@ -1,0 +1,10 @@
+name: java-learning
+channels:
+  - conda-forge
+dependencies:
+  - openjdk=11
+  - jupyter
+  - jupyterlab
+  - pip
+  - pip:
+    - ijava

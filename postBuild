@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Install IJava kernel for Jupyter
+# This script runs during Binder build to set up the Java environment
+
+# Download and install IJava
+wget https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-1.3.0.zip
+unzip ijava-1.3.0.zip
+python install.py --sys-prefix
+
+# Clean up
+rm ijava-1.3.0.zip
+rm -rf java
+
+echo "IJava kernel installed successfully!"
